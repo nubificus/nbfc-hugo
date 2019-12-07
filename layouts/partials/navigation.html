@@ -1,0 +1,56 @@
+<header role="banner" id="header">
+    <nav class="navbar navbar-expand-md navbar-light navbar-nbfc navbar-default">
+        <div class="container">
+            <a class="navbar-brand" href="{{ .Site.BaseURL }}">
+            {{ with .Site.Params.navigation.logo }}
+                <img src="{{ . }}" height="35" alt="logo">
+    	    {{ end }}
+            </a>
+            <a type="button" class="js-nbfc-nav-toggle nbfc-nav-toggle ml-auto" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link " href="{{ .Site.BaseURL }}#home">
+							<span>{{ with .Site.Params.navigation.home }} {{ . }} {{ end }}</span>
+                        </a>
+                    </li>
+                    {{ if .Site.Params.features.enable }}
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="{{ .Site.BaseURL }}#features">
+                                <span>{{ with .Site.Params.navigation.features }} {{ . }} {{ end }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                    {{ if .Site.Params.services.enable }}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#services">
+                                <span>{{ with .Site.Params.navigation.services }} {{ . }} {{ end }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                    {{ if .Site.Params.useCases.enable }}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#use-cases">
+                                <span>{{ with .Site.Params.navigation.useCases }} {{ . }} {{ end }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                    {{ if .Site.Params.openSource.enable }}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#open-source">
+                                <span>{{ with .Site.Params.navigation.openSource }} {{ . }} {{ end }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                    {{ if .Site.Params.contact.enable }}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ .Site.BaseURL }}#contact">
+                                <span>{{ with .Site.Params.navigation.contact }} {{ . }} {{ end }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
