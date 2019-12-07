@@ -1,0 +1,34 @@
+{{ if .Site.Params.openSource.enable }}
+    {{"<!-- Open Source Section -->" | safeHTML}}
+    <section id="open-source" class="section-bg-grey">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-md-12 col-sm-12 wow fadeInLeft"> -->
+                <div class="col-md-12 text-center">
+                {{ with .Site.Params.openSource.heading }}
+                    <h2 class="section-title single-animate animate-opensource-1">{{ . }}</h2>
+                {{ end }}
+                {{ with .Site.Params.openSource.description }}
+                    <div class="row">
+                        <div class="col-md-8 mx-auto single-animate animate-opensource-2">
+                            <h5 class="section-subtitle">{{ . | markdownify }}</h5>
+                        </div>
+                    </div>
+                {{ end }}
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 animate-grayscale">
+            {{ $count := len .Site.Params.features.item }}
+            {{ range $index, $v := .Site.Params.openSource.item }}
+            {{ if eq $count $index }}
+                <div class="col-12 col-md text-center">
+            {{ else }}
+                <div class="mb-5 col-12 col-md text-center to-animate">
+            {{ end }}
+                    <a href="{{ .link }}" target="_blank"><img src="{{ .image }}" height="80px" class="to-grayscale"></a>
+                </div>
+            {{ end }}
+            </div>
+        </div>
+    </section>
+{{ end }}

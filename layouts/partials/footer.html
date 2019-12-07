@@ -1,0 +1,47 @@
+<!-- Footer -->
+	<footer id="footer" class="section section-bg-dark" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up"></i></a>
+		<div class="container">
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-12">
+					<p class="copyright text-center">
+						Nubificus LTD is a company registered in England and Wales. Company #11545167. <br>
+						Copyright &copy; 2019 Nubificus LTD. All Rights Reserved. <br>
+						Theme based on templates by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://twitter.com/nubificus" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://linkedin.com/company/nubificus" title="LinkedIn" target="_blank"><i class="icon-linkedin"></i></a></li>
+						<li><a href="https://github.com/nubificus" title="GitHub" target="_blank"><i class="icon-github"></i></a></li>
+						<li><a href="https://blog.cloudkernels.net" title="Blog" target="_blank"><i class="icon-book"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	{{"<!-- Js -->" | safeHTML}}
+	<script src="{{"js/jquery-3.4.1.min.js" | absURL}}"></script>
+	<script src="{{"js/jquery.easing.1.3.js" | absURL}}"></script>
+	<script src="{{"js/bootstrap.min.js" | absURL}}"></script>
+	<script src="{{"js/jquery.waypoints.min.js" | absURL}}"></script>
+	<script src="{{"js/jquery.validate.min.js" | absURL}}"></script>
+	<script src="{{"js/jquery.form.min.js" | absURL}}"></script>
+	<script src="{{"js/jquery.nav.js" | absURL}}"></script>
+	<script src="{{"js/main.js" | absURL}}"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1610214-8"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', {{ .Site.GoogleAnalytics }});
+	</script>
+
+</body>
+
+</html>

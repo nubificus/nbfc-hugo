@@ -1,0 +1,45 @@
+{{ if .Site.Params.home.enable }}
+    {{"<!-- Home Section -->" | safeHTML}}
+    <section id="home">
+        <div class="carousel-fullwidth">
+            <div class="item">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-4 col-sm-4 my-auto">
+                            <div class="to-animate-2">
+                                <img src="{{ with .Site.Params.home.bg }} {{ . | absURL }}{{ end }}" alt="logo">
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                            <div class="nbfc-carousel-text-wrap">
+                                <div class="nbfc-carousel-text">
+                                    {{ with .Site.Params.home.title }} 
+                                    <h1 class="nbfc-lead to-animate">
+                                        {{ . }}
+                                    </h1>
+                                    {{ end }}
+                                    {{ with .Site.Params.home.subtitle }} 
+                                    <h3 class="nbfc-sub-lead to-animate">
+                                        {{ . }}
+                                    </h3>
+                                    {{ end }}
+									{{ $href := "" }}
+									{{ with .Site.Params.home.btnSection }}
+                                    {{ $href = . }}
+                                    {{ end }}
+                                    {{ with .Site.Params.home.btnText }}
+                                    <p class="to-animate-2">
+                                        <a href="#{{ $href }}" class="btn btn-primary btn-lg">
+                                            {{ . }}
+                                        </a>
+                                    </p>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

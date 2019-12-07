@@ -1,0 +1,36 @@
+{{ if .Site.Params.services.enable }}
+    {{"<!-- Services Section -->" | safeHTML}}
+    <section id="services" class="section-bg-grey section-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-heading text-center">
+                {{ with .Site.Params.services.title }}
+                    <h1 class="section-title single-animate animate-features-1">{{ . }}</h1>
+                {{ end }}
+                {{ with .Site.Params.services.subtitle }}
+                    <div class="row">
+                        <div class="col-md-8 mx-auto single-animate animate-features-2">
+                            <h3 class="section-subtitle">{{ . }}</h3>
+                        </div>
+                    </div>
+                {{ end }}
+                </div>
+            </div>
+        {{ range $index, $v := .Site.Params.services.item }}
+        {{ if eq (mod $index 2) 0 }}
+            <div class="row">
+        {{ end }}
+                <div class="col-12 col-md d-md-flex nbfc-service to-animate">
+                    <div class="nbfc-icon"><i class="{{ .icon }}"></i></div>
+                    <div class="nbfc-desc">
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description }}</p>
+                    </div>
+                </div>
+        {{ if and (ne $index 0) (or (eq (mod $index 3) 0) (eq $index 1)) }}
+            </div>
+        {{ end }}
+        {{ end }}
+        </div>
+    </section>
+{{ end }}

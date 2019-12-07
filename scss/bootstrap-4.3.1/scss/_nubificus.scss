@@ -1,0 +1,36 @@
+$font-family-sans-serif: 'Source Sans Pro', Arial, sans-serif;
+
+// Overrides
+$grid-gutter-width: 40px !default; 
+//$border-radius-base:  4px !default;
+//$padding-base-vertical: 14px !default;
+
+// $primary: #6173f4 !default; // purple
+// $primary: #f64662 !default; // pink
+$primary: #0000FF !default; // blue
+$primary-dark: #000081 ; // blue
+// $primary: #00b8a9 !default; // turquoise
+// $primary: #ff6600 !default; // orange
+// $primary: #5585b5 !default; // lightblue
+// $primary: #a03232 !default; // brown
+// $primary: #65d269 !default; // green
+
+$container-max-widths: (
+  sm: 560px,
+  md: 740px,
+  lg: 980px,
+  xl: 1160px
+) !default;
+
+$white: #fff;
+$darker: #444;
+$gray: #ccc;
+$lighter: #e9e9e9;
+$body-color: #818892;
+$selection-color: #f9f6f0;
+$overlay-color: #3b3d40;
+$bg-color: $white;
+$banner-bg-color: #0396F9;
+
+$input-border-focus:  $primary !default;
+$form-group-margin-bottom:       30px !default;

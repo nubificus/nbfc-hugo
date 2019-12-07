@@ -1,0 +1,34 @@
+
+{{ if .Site.Params.features.enable }}
+    {{"<!-- Features Section -->" | safeHTML}}
+    <section id="features">
+        <div class="container">
+            <div class="row row-bottom-padded-sm">
+                <div class="col-md-12 section-heading text-center">
+                {{ with .Site.Params.features.title }}
+                    <h1 class="section-title single-animate animate-features-1">{{ . }}</h1>
+                {{ end }}
+                {{ with .Site.Params.feautures.subtitle }}
+                    <div class="row">
+                        <div class="col-md-8 mx-auto single-animate animate-features-2">
+                            <h3 class="section-subtitle">{{ . }}</h3>
+                        </div>
+                    </div>
+                {{ end }}
+                </div>
+            </div>
+            <div class="row">
+            {{ $count := len .Site.Params.features.item }}
+            {{ range .Site.Params.features.item }}
+                <div class="col-md-{{ div 12 $count }}">
+                    <div class="box to-animate">
+                        <div class="icon colored-2"><span><i class="{{ .icon }}"></i></span></div>
+                        <h3>{{ .title }}</h3>
+                        <p>{{ .description }}</p>
+                    </div>
+                </div>
+            {{ end }}
+            </div>
+        </div>
+    </section>
+{{ end }}
