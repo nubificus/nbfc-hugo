@@ -696,6 +696,8 @@ section,
   height: 44px;
   width: 44px;
   border-bottom: none!important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   @media screen and (max-width: map-get($grid-breakpoints, "md")) {
   	display: inline-block;
   }
