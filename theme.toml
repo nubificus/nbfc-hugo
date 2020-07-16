@@ -8,7 +8,7 @@ description = "Nubificus theme"
 homepage = "https://nubificus.com"
 tags = ['comming-soon', 'landing-page', 'nbfc', 'hugo-theme', 'hugo-templates', 'bootstrap4']
 features = ['bootstrap4','responsive']
-min_version = "0.55"
+min_version = "0.54"
 
 [author]
   name = "papazof"
