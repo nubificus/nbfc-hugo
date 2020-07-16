@@ -1,0 +1,24 @@
+{{ define "content" }}
+    {{ if .Params.tags }}
+    <div class="subtitle tags is-6 is-pulled-right">
+      {{ partial "tags" .Params.tags }}
+    </div>
+    {{ end }}
+	<div>
+	<h1 class="title">
+      {{ .Title }}
+	  {{ if .Draft }} ::Draft{{ end }}
+	</h1>
+    {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
+    {{ partial "adsense" . }}
+    {{ end }}
+    <div class="content">
+      {{ .Content }}
+      {{ if .Site.Params.Info.related }}
+      <div class="related">{{ partial "related" . }}</div>
+      {{ end }}
+    </div>
+    {{ if and (.Site.Params.Info.adsense)  (.Params.adsenseBottom) }}
+    {{ partial "adsense" . }}
+    {{ end }}
+{{ end }}
