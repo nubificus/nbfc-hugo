@@ -1,0 +1,32 @@
+{{ define "content" }}
+    <div class="row">
+	<div class="col-12 col-md-12 text-center">
+    {{ if .Params.tags }}
+        <div class="subtitle tags is-6 is-pulled-right">
+            {{ partial "tags" .Params.tags }}
+        </div>
+    {{ end }}
+	    <div class="section-heading">
+        {{ with .Title }}
+            <h1 class="section-title">{{ . }}</h1>
+        {{ end }}
+        </div>
+    </div>
+	</div>
+    <div class="row">
+	<div class="col-12 col-md-12 text-centered">
+      {{ .Content }}
+
+      {{ if .Site.Params.Info.related }}
+      <div class="related">{{ partial "related" . }}</div>
+      {{ end }}
+	</div>
+	</div>
+	{{ range .Pages }}                          
+	   {{ partial "job.html" . }}
+	{{ end }}
+	<div class="pb-5"></div>
+{{ end }}
+
+
+    

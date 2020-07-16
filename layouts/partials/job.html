@@ -1,0 +1,16 @@
+    {{"<!-- Job Section -->" | safeHTML}}
+            <div class="row pt-4">
+                <div class="col-md-12 ">
+                {{ with .Title }}
+                    <h2 class="">{{ . }}</h2>
+                {{ end }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 ">
+                {{ with .Content }}
+									{{ . }}
+                {{ end }}
+                </div>
+            </div>

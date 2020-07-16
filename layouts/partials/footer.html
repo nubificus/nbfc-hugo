@@ -5,9 +5,11 @@
 			<div class="row row-bottom-padded-sm">
 				<div class="col-md-12">
 					<p class="copyright text-center">
-						Nubificus LTD is a company registered in England and Wales. Company #11545167. <br>
-						Copyright &copy; 2019 Nubificus LTD. All Rights Reserved. <br>
-						Theme based on templates by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a>
+					  {{ with dateFormat "2006" now }}
+						 Nubificus LTD is a company registered in England and Wales. Company #11545167. <br>
+						 Copyright &copy; 2019-{{ . }} Nubificus LTD. All Rights Reserved. <br>
+						 Theme based on templates by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a>
+						{{ end }}
 					</p>
 				</div>
 			</div>
