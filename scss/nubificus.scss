@@ -1011,7 +1011,8 @@ section,
 		// bottom: -5em;
 	}
 	.item {
-		background: $banner-bg-color;
+		//background: $banner-bg-color;
+		background: linear-gradient(rgba(03,96,249,0.5), rgba(3,96,249,0.2)), url("../images/bg.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top left;
