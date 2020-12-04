@@ -3,17 +3,21 @@
     <section id="use-cases">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                 {{ with .Site.Params.useCases.heading }}
 					<h2 class="section-title single-animate animate-usecases-1">{{ . }}</h2>
                 {{ end }}
-                {{ with .Site.Params.useCases.description }}
-					<h5 class="section-subtitle single-animate animate-usecases-2">{{ . | markdownify }}</h5>
-                {{ end }}
-                </div>
-                <div class="col-md-5 d-flex mt-5 mt-md-0 align-items-center to-animate">
+
+                <div class="col-md-4 d-flex mt-12 mt-md-0 align-items-center to-animate">
                 {{ range .Site.Params.useCases.item }}
                     <img src="{{ .image }}"class="w-100 px-4 px-md-0 px-lg-5" style="opacity:.9">
+                {{ end }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                {{ with .Site.Params.useCases.description }}
+			<h5 class="section-subtitle single-animate animate-usecases-2">{{ . | markdownify }}</h5>
                 {{ end }}
                 </div>
             </div>

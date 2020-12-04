@@ -1,0 +1,21 @@
+    {{"<!-- News Section -->" | safeHTML}}
+            <div class="row pt-4">
+                <div class="col-md-12 ">
+                {{ with .Title }}
+                    <h2 class="">{{ . }}</h2>
+                {{ end }}
+        	{{ with dateFormat "Dec 2, 2006" .Date }}
+		<h6>{{ . }} </h6>
+        	{{ end }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 ">
+                {{ with .Content }}
+		<span style="font-variant: small-caps;">Sheffield, UK</span> {{ . }}
+                {{ end }}
+                </div>
+            </div>
+
+	    <hr>
