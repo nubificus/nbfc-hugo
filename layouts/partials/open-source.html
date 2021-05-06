@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="row mt-5 pt-4 animate-grayscale">
-            {{ $count := len .Site.Params.features.item }}
+            {{ $count := len .Site.Params.openSource.item }}
             {{ range $index, $v := .Site.Params.openSource.item }}
             {{ if eq $count $index }}
                 <div class="col-12 col-md text-center">
